@@ -1,2 +1,3 @@
-# gitlab-ci-templates
-Templates the GitLab CI/CD
+# GitLab CI/CD Samples
+
+- [Build images and push to AWS registry](./examples/build-images-and-push-to-registry/)
