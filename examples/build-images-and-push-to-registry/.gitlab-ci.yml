@@ -1,0 +1,17 @@
+variables:
+  PROJECT: sample-app
+
+image: docker:19.03.13
+
+services:
+  - docker:19.03.13-dind
+
+stages:
+  - build_images
+  - push_to_registry
+  
+before_script:
+  #- apk update
+  - apk add --no-cache make
+  - cp .env.dist .env
+  - make init
